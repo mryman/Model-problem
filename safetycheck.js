@@ -18,7 +18,7 @@ console.log(carabiner);
 
 submitClicked.addEventListener('click', getEligible(), false);
 /* comment out to troubleshoot
-//Each climber must be 18 or older and have all 4 pieces of equipment to proceed. Mechanisms for input will be text box, text box, check box, check box, check box, check box.
+//Each climber must be 18 or older and have all 4 pieces of equipment to proceed. Mechanisms for input will be text boxes. Eventually the 4 data from the 4 pieces of equipment will need to somehow be converted to boolean values to proceed.
 
 function Climber(name, age, harness, rope, device, carabiner) {
   this.name = name;
