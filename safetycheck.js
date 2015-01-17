@@ -1,5 +1,5 @@
 var submitClicked = document.getElementById('submit_btn');
-
+var currentClimber = getEligible();
 
 function getEligible() {
 var name = document.getElementById('inName').value;
@@ -8,16 +8,18 @@ var harness = document.getElementById('inHarness').value;
 var rope = document.getElementById('inRope').value;
 var device = document.getElementById('inDevice').value;
 var carabiner = document.getElementById('inCarabiner').value;
-console.log(name);
-console.log(age);
-console.log(harness);
-console.log(rope);
-console.log(device);
-console.log(carabiner);
+var climber = new Climber (name, age, harness, rope, device, carabiner);
+console.log(climber.name);
+console.log(climber.age);
+console.log(climber.harness);
+console.log(climber.rope);
+console.log(climber.device);
+console.log(climber.carabiner);
+return climber;
 }
 
-submitClicked.addEventListener('click', getEligible(), false);
-/* comment out to troubleshoot
+submitClicked.addEventListener('click', getEligible, false);
+
 //Each climber must be 18 or older and have all 4 pieces of equipment to proceed. Mechanisms for input will be text boxes. Eventually the 4 data from the 4 pieces of equipment will need to somehow be converted to boolean values to proceed.
 
 function Climber(name, age, harness, rope, device, carabiner) {
@@ -38,12 +40,6 @@ function Climber(name, age, harness, rope, device, carabiner) {
   };
 }
 
-
-
-
-
-climber = new Climber("Joe", 25, true, true, true, true);
-console.log(climber.isAdult());
 
 //Each climber must demonstrate 5 important steps of visual/physical inspection to proceed to final section. Five check boxes.
 
@@ -66,4 +62,14 @@ function Comms(belayCall, belayReply, climbCall, climbReply) {
   this.climbReply = climbReply;
 }
 
-*/
+
+var goodToGo = false;
+
+if (goodToGo){
+  proceed();
+else{
+  course101();
+}
+}
+
+
