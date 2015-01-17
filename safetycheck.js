@@ -1,28 +1,53 @@
 var submitClicked = document.getElementById('submit_btn');
-var currentClimber = getEligible();
+var currentClimber = getInfo();
 
-function getEligible() {
+function getInfo() {
 var name = document.getElementById('inName').value;
 var age = document.getElementById('inAge').value;
 var harness = document.getElementById('inHarness').value;
 var rope = document.getElementById('inRope').value;
 var device = document.getElementById('inDevice').value;
 var carabiner = document.getElementById('inCarabiner').value;
-var climber = new Climber (name, age, harness, rope, device, carabiner);
-console.log(climber.name);
-console.log(climber.age);
-console.log(climber.harness);
-console.log(climber.rope);
-console.log(climber.device);
-console.log(climber.carabiner);
+var harnessFit = document.getElementById('inOwnHarness').value;
+var partnerHarnessFit = document.getElementById('inPartnerHarness').value;
+var dblBack = document.getElementById('inOwnDblBack').value;
+var partnerDblBack = document.getElementById('inPartnerDblBack').value;
+var knotTied = document.getElementById('inOwnKnot').value;
+var deviceLoad = document.getElementById('inOwnDevice').value;
+var carabinerLock = document.getElementById('inLockCarabiner').value;
+var belayCall = document.getElementById('inOnBelay').value;
+var belayReply = document.getElementById('inBelayOn').value;
+var climbCall = document.getElementById('inClimbing').value;
+var climbReply = document.getElementById('inClimbOn').value;
+
+var climber = new Climber (name, age, harness, rope, device, carabiner, harnessFit, partnerHarnessFit, dblBack, partnerDblBack, knotTied, deviceLoad, carabinerLock, belayCall, belayReply, climbCall, climbReply);
+console.log(belayCall);
+
 return climber;
+
+
 }
 
-submitClicked.addEventListener('click', getEligible, false);
+submitClicked.addEventListener('click', getInfo, false);
 
+
+
+/*
+function evaluate(){
+  if (!currentClimber.isAdult ) {
+    console.log("referOther()");
+  }
+  else if ((currentClimber.hasGear == true) && (currentClimber.allInspect == true) && (currentClimber.allComms == true)){
+    console.log("welcome()");
+  }
+  else {
+    console.log("takeClass()");
+  }
+ }
+*/
 //Each climber must be 18 or older and have all 4 pieces of equipment to proceed. Mechanisms for input will be text boxes. Eventually the 4 data from the 4 pieces of equipment will need to somehow be converted to boolean values to proceed.
 
-function Climber(name, age, harness, rope, device, carabiner) {
+function Climber(name, age, harness, rope, device, carabiner, harnessFit, partnerHarnessFit, dblBack, partnerDblBack, knotTied, deviceLoad, carabinerLock, belayCall, belayReply, climbCall, climbReply) {
   this.name = name;
   this.age = age;
   this.harness = harness;
@@ -33,15 +58,51 @@ function Climber(name, age, harness, rope, device, carabiner) {
     if (age >= 18){
       return true;
     }
+    else {
+      return false;
+    }
   };
   this.hasGear = function() {
-    if (this.harness && this.rope && this.device && this.carabiner)
+    if (this.harness && this.rope && this.device && this.carabiner){
       return true;
+    }
+    else {
+      return false;
+    }
   };
+  this.harnessFit = harnessFit;
+  this.partnerHarnessFit = partnerHarnessFit;
+  this.dblBack = dblBack;
+  this.partnerDblBack = partnerDblBack;
+  this.knotTied = knotTied;
+  this.deviceLoad = deviceLoad;
+  this.carabinerLock = carabiner;
+  this.allInspect = function() {
+    if ((harnessFit == "y") && (partnerHarnessFit == "y") && (dblBack == "y") && (partnerDblBack == "y") && (knotTied == "y") && (deviceLoad == "y") && (carabinerLock == "y")) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+  this.belayCall = belayCall;
+  this.belayReply = belayReply;
+  this.climbCall = climbCall;
+  this.climbReply = climbReply;
+  this.allComms = function() {
+    if ((belayCall == "on belay") && (belayReply == "belay on") && (climbCall == "climbing") && (climbReply == "climb on")) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 }
 
 
-//Each climber must demonstrate 5 important steps of visual/physical inspection to proceed to final section. Five check boxes.
+
+
+/*Each climber must demonstrate 5 important steps of visual/physical inspection to proceed to final section. Five check boxes.
 
 
 function Inspection(harnessFit, harnessBuckle, knotTied, deviceLoad, carabinerLock) {
@@ -65,11 +126,11 @@ function Comms(belayCall, belayReply, climbCall, climbReply) {
 
 var goodToGo = false;
 
-if (goodToGo){
+/*if (goodToGo){
   proceed();
 else{
   course101();
 }
 }
-
+*/
 

@@ -18,46 +18,50 @@
     <h2> Eligibility Section </h2>
     <input type="text" id="inName" placeholder="Enter your name">
     <input type="text" id="inAge" placeholder="Enter your age">
-    <input type="text" id="inHarness" placeholder="Do you have a harness?">
-    <input type="text" id="inRope" placeholder="Do you have a rope?">
-    <input type="text" id="inDevice" placeholder="Do you have a belay device?">
-    <input type="text" id="inCarabiner" placeholder="Do you have a locking carabiner?">
-    <br>
-    <br>
-    <button id="submit_btn">Submit</button>
+    <p> Do you have a climbing harness?</p>
+    <input type="text" id="inHarness" placeholder="Enter y or n">
+    <p> Do you have a climbing rope?</p>
+    <input type="text" id="inRope" placeholder="Enter y or n">
+    <p> Do you have a belay device?</p>
+    <input type="text" id="inDevice" placeholder="Enter y or n">
+    <p> Do you have a locking carabiner?</p>
+    <input type="text" id="inCarabiner" placeholder="Enter y or n">
   </section>
   <br>
 
 <section class="inspection_boxes">
   <h2> Physical / Visual Inspection Steps </h2>
   <p> Do you know how to inspect your harness for correct sizing, fit, and orientation? </p>
-  <input type="text" id="inOwnHarness" >
+  <input type="text" id="inOwnHarness" placeholder="Enter y or n">
   <p> Do you know how to inspect your partner's harness for these factors as well? </p>
-  <input type="text" id="inPartnerHarness">
+  <input type="text" id="inPartnerHarness" placeholder="Enter y or n">
   <p> Can you verify when your harness buckle is doubled back?</p>
-  <input type="text" id="inOwnDblBack">
+  <input type="text" id="inOwnDblBack" placeholder="Enter y or n">
   <p> Can you verify when your partner's harness buckle is doubled back?</p>
-  <input type="text" id="inPartnerDblBack">
+  <input type="text" id="inPartnerDblBack" placeholder="Enter y or n">
   <p> Can you demonstrate how to tie a rewoven figure eight knot?</p>
-  <input type="text" id="inOwnKnot">
+  <input type="text" id="inOwnKnot" placeholder="Enter y or n">
   <p> Can you demonstrate how to properly load a belay device?</p>
-  <input type="text" id="inOwnDevice">
+  <input type="text" id="inOwnDevice" placeholder="Enter y or n">
   <p> Do you know how to confirm the carabiner on the device is locked?</p>
-  <input type="text" id="inOwnCarabiner">
+  <input type="text" id="inLockCarabiner" placeholder="Enter y or n">
 </section>
+<br>
 
 <section class="comms_boxes">
   <h2> Verbal Communication Steps </h2>
   <p> What two words should a climber say to verify his/her belayer is ready?</p>
   <input type="text" id="inOnBelay">
-  <p> What two word reply from a belay indicates he/she is ready?</p>
+  <p> What two word reply from a belayer indicates he/she is ready?</p>
   <input type="text" id="inBelayOn">
   <p> What should a climber say to his/her belayer just before starting up a climb?</p>
   <input type="text" id="inClimbing" >
   <p> What two words should a belayer say to affirm a climber may begin?</p>
   <input type="text" id="inClimbOn" >
-
-
+</section>
+  <br>
+  <br>
+  <button id="submit_btn">Submit</button>
 
   <script src= "safetycheck.js"></script>
   </body>
