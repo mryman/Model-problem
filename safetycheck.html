@@ -9,19 +9,56 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Place favicon.ico in the root directory -->
 
-<script src= "safetycheck.js"></script>
+
 </head>
   <body>
-  <h1>This is climber safety check prep list</h1>
-  <p id="request-info">Please answer questions below</p>
-  <section id="input_boxes">
-    <input type='text' id='inName' placeholder='Enter your name'>
-    <input type='text' id='inAge' placeholder='Enter your age'>
-    <input type='text' id='inHarness' placeholder='Do you have a harness?'>
-    <input type='text' id='inRope' placeholder='Do you have a rope?'>
-    <input type='text' id='inDevice' placeholder='Do you have a belay device?'>
-    <input type='text' id='inCarabiner' placeholder='Do you have a locking carabiner?'>
-    <button id='submit_btn'>Submit</button>
+  <h1>This is a climber safety check prep list</h1>
+  <p id="request-info">Please answer questions below. These steps are representative of what we expect to see when you complete a safety check in person with one of our staff members prior to being admitted to our facility</p>
+  <section class="elibility_boxes">
+    <h2> Eligibility Section </h2>
+    <input type="text" id="inName" placeholder="Enter your name">
+    <input type="text" id="inAge" placeholder="Enter your age">
+    <input type="text" id="inHarness" placeholder="Do you have a harness?">
+    <input type="text" id="inRope" placeholder="Do you have a rope?">
+    <input type="text" id="inDevice" placeholder="Do you have a belay device?">
+    <input type="text" id="inCarabiner" placeholder="Do you have a locking carabiner?">
+    <br>
+    <br>
+    <button id="submit_btn">Submit</button>
+  </section>
+  <br>
 
+<section class="inspection_boxes">
+  <h2> Physical / Visual Inspection Steps </h2>
+  <p> Do you know how to inspect your harness for correct sizing, fit, and orientation? </p>
+  <input type="text" id="inOwnHarness" >
+  <p> Do you know how to inspect your partner's harness for these factors as well? </p>
+  <input type="text" id="inPartnerHarness">
+  <p> Can you verify when your harness buckle is doubled back?</p>
+  <input type="text" id="inOwnDblBack">
+  <p> Can you verify when your partner's harness buckle is doubled back?</p>
+  <input type="text" id="inPartnerDblBack">
+  <p> Can you demonstrate how to tie a rewoven figure eight knot?</p>
+  <input type="text" id="inOwnKnot">
+  <p> Can you demonstrate how to properly load a belay device?</p>
+  <input type="text" id="inOwnDevice">
+  <p> Do you know how to confirm the carabiner on the device is locked?</p>
+  <input type="text" id="inOwnCarabiner">
+</section>
+
+<section class="comms_boxes">
+  <h2> Verbal Communication Steps </h2>
+  <p> What two words should a climber say to verify his/her belayer is ready?</p>
+  <input type="text" id="inOnBelay">
+  <p> What two word reply from a belay indicates he/she is ready?</p>
+  <input type="text" id="inBelayOn">
+  <p> What should a climber say to his/her belayer just before starting up a climb?</p>
+  <input type="text" id="inClimbing" >
+  <p> What two words should a belayer say to affirm a climber may begin?</p>
+  <input type="text" id="inClimbOn" >
+
+
+
+  <script src= "safetycheck.js"></script>
   </body>
 </html>
