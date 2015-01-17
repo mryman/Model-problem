@@ -21,7 +21,7 @@
       <li><a href="index.html" class="links">Home</a></li>
       <li><a href="aboutMe.html" class="links">About Us</a></li>
     </ul>
-  </div>  
+  </div>
   </nav>
   <body>
   <h1>This is a climber safety check prep list</h1>
@@ -31,31 +31,75 @@
     <input type="text" id="inName" placeholder="Enter your name">
     <input type="text" id="inAge" placeholder="Enter your age">
     <p> Do you have a climbing harness?
-    <input type="text" id="inHarness" placeholder="Enter y or n"></p>
+      <select id="inHarness">
+        <option value="n">n</option>
+        <option value="y">y</option>
+      </select>
+    </p>
     <p> Do you have a climbing rope?
-    <input type="text" id="inRope" placeholder="Enter y or n"></p>
+      <select id="inRope">
+        <option value="n">n</option>
+        <option value="y">y</option>
+      </select>
+    </p>
     <p> Do you have a belay device?
-    <input type="text" id="inDevice" placeholder="Enter y or n"></p>
+      <select id="inDevice">
+        <option value="n">n</option>
+        <option value="y">y</option>
+      </select>
+    </p>
     <p> Do you have a locking carabiner?
-    <input type="text" id="inCarabiner" placeholder="Enter y or n"></p>
+      <select id="inCarabiner">
+        <option value="n">n</option>
+        <option value="y">y</option>
+      </select>
+    </p>
   </section>
   <br>
 <section class="inspection_boxes">
   <h2> Physical / Visual Inspection Steps </h2>
   <p> Do you know how to inspect your harness for correct sizing, fit, and orientation?
-  <input type="text" id="inOwnHarness" placeholder="Enter y or n"></p>
+    <select id="inOwnHarness">
+      <option value="n">n</option>
+      <option value="y">y</option>
+    </select>
+  </p>
   <p> Do you know how to inspect your partner's harness for these factors as well?
-  <input type="text" id="inPartnerHarness" placeholder="Enter y or n"></p>
+    <select id="inPartnerHarness">
+      <option value="n">n</option>
+      <option value="y">y</option>
+    </select>
+  </p>
   <p> Can you verify when your harness buckle is doubled back?
-  <input type="text" id="inOwnDblBack" placeholder="Enter y or n"></p>
+    <select id="inOwnDblBack">
+      <option value="n">n</option>
+      <option value="y">y</option>
+    </select>
+  </p>
   <p> Can you verify when your partner's harness buckle is doubled back?
-  <input type="text" id="inPartnerDblBack" placeholder="Enter y or n"></p>
+    <select id="inPartnerDblBack">
+      <option value="n">n</option>
+      <option value="y">y</option>
+    </select>
+  </p>
   <p> Can you demonstrate how to tie a rewoven figure eight knot?
-  <input type="text" id="inOwnKnot" placeholder="Enter y or n"></p>
+    <select id="inOwnKnot">
+      <option value="n">n</option>
+      <option value="y">y</option>
+    </select>
+  </p>
   <p> Can you demonstrate how to properly load a belay device?
-  <input type="text" id="inOwnDevice" placeholder="Enter y or n"></p>
+    <select id="inOwnDevice">
+      <option value="n">n</option>
+      <option value="y">y</option>
+    </select>
+  </p>
   <p> Do you know how to confirm the carabiner on the device is locked?
-  <input type="text" id="inLockCarabiner" placeholder="Enter y or n"></p>
+    <select id="inLockCarabiner">
+      <option value="n">n</option>
+      <option value="y">y</option>
+    </select>
+  </p>
 </section>
 <br>
 
@@ -70,6 +114,7 @@
   <p> What two words should a belayer say to affirm a climber may begin?
   <input type="text" id="inClimbOn"></p>
    <button class="submit" id="submit_btn">Submit</button>
+   <section id="join"></section>
 </section>
   <br>
   <script src= "safetycheck.js"></script>

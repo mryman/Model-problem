@@ -23,11 +23,22 @@ var climbReply = document.getElementById('inClimbOn').value;
 var climber = new Climber (name, age, harness, rope, device, carabiner, harnessFit, partnerHarnessFit, dblBack, partnerDblBack, knotTied, deviceLoad, carabinerLock, belayCall, belayReply, climbCall, climbReply);
 console.log(belayCall);
 
+document.body.onload = addElement;
 return climber;
 
 
-}
+//elJoin.innerHTML = "<button class=\"submit\" id=\"join_btn\">Join</button>"
+  function addElement() {
+   var elFeedback = document.createElement("button");
+    var newContent = document.createTextNode("Feedback");
+    elFeedback.appendChild(newContent); //add the text node to the newly created div.
 
+    // add the newly created element and its content into the DOM
+    var currentBtn = document.getElementById("submit_btn");
+    document.body.insertBefore(elFeedback, currentBtn);
+  }
+
+}
 submitClicked.addEventListener('click', getInfo, false);
 
 
@@ -84,7 +95,7 @@ function Climber(name, age, harness, rope, device, carabiner, harnessFit, partne
     else {
       return false;
     }
-  }
+  };
   this.belayCall = belayCall;
   this.belayReply = belayReply;
   this.climbCall = climbCall;
@@ -96,7 +107,7 @@ function Climber(name, age, harness, rope, device, carabiner, harnessFit, partne
     else {
       return false;
     }
-  }
+  };
 }
 
 
