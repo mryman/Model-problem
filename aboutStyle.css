@@ -7,6 +7,10 @@
 	background-position: right;
 }
 
+.scHeader {
+	background-image:url(http://bjtphotography.com/blog/wp-content/uploads/2010/06/Stacey-Monkey-Face-Panorama-copy.jpg);
+}
+
 .menuBar {
 	height:35px;
 	width: 100%;
@@ -50,4 +54,10 @@
 
 .list {
 	list-style-type: none;
+}
+
+.submit {
+	background-color: #dfa973;
+	font-family: Oswald;
+	font-size: 18px;
 }

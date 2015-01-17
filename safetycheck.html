@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="aboutStyle.css">
 <title>Safety Check Prep</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,58 +12,66 @@
 
 
 </head>
+<header>
+  <div class="scHeader headerImg"</div>
+</header>
+  <nav>
+   <div class="menuBar">
+    <ul>
+      <li><a href="index.html" class="links">Home</a></li>
+      <li><a href="aboutMe.html" class="links">About Us</a></li>
+    </ul>
+  </div>  
+  </nav>
   <body>
   <h1>This is a climber safety check prep list</h1>
   <p id="request-info">Please answer questions below. These steps are representative of what we expect to see when you complete a safety check in person with one of our staff members prior to being admitted to our facility</p>
-  <section class="elibility_boxes">
+  <section class="eligibility_boxes">
     <h2> Eligibility Section </h2>
     <input type="text" id="inName" placeholder="Enter your name">
     <input type="text" id="inAge" placeholder="Enter your age">
-    <p> Do you have a climbing harness?</p>
-    <input type="text" id="inHarness" placeholder="Enter y or n">
-    <p> Do you have a climbing rope?</p>
-    <input type="text" id="inRope" placeholder="Enter y or n">
-    <p> Do you have a belay device?</p>
-    <input type="text" id="inDevice" placeholder="Enter y or n">
-    <p> Do you have a locking carabiner?</p>
-    <input type="text" id="inCarabiner" placeholder="Enter y or n">
+    <p> Do you have a climbing harness?
+    <input type="text" id="inHarness" placeholder="Enter y or n"></p>
+    <p> Do you have a climbing rope?
+    <input type="text" id="inRope" placeholder="Enter y or n"></p>
+    <p> Do you have a belay device?
+    <input type="text" id="inDevice" placeholder="Enter y or n"></p>
+    <p> Do you have a locking carabiner?
+    <input type="text" id="inCarabiner" placeholder="Enter y or n"></p>
   </section>
   <br>
-
 <section class="inspection_boxes">
   <h2> Physical / Visual Inspection Steps </h2>
-  <p> Do you know how to inspect your harness for correct sizing, fit, and orientation? </p>
-  <input type="text" id="inOwnHarness" placeholder="Enter y or n">
-  <p> Do you know how to inspect your partner's harness for these factors as well? </p>
-  <input type="text" id="inPartnerHarness" placeholder="Enter y or n">
-  <p> Can you verify when your harness buckle is doubled back?</p>
-  <input type="text" id="inOwnDblBack" placeholder="Enter y or n">
-  <p> Can you verify when your partner's harness buckle is doubled back?</p>
-  <input type="text" id="inPartnerDblBack" placeholder="Enter y or n">
-  <p> Can you demonstrate how to tie a rewoven figure eight knot?</p>
-  <input type="text" id="inOwnKnot" placeholder="Enter y or n">
-  <p> Can you demonstrate how to properly load a belay device?</p>
-  <input type="text" id="inOwnDevice" placeholder="Enter y or n">
-  <p> Do you know how to confirm the carabiner on the device is locked?</p>
-  <input type="text" id="inLockCarabiner" placeholder="Enter y or n">
+  <p> Do you know how to inspect your harness for correct sizing, fit, and orientation?
+  <input type="text" id="inOwnHarness" placeholder="Enter y or n"></p>
+  <p> Do you know how to inspect your partner's harness for these factors as well?
+  <input type="text" id="inPartnerHarness" placeholder="Enter y or n"></p>
+  <p> Can you verify when your harness buckle is doubled back?
+  <input type="text" id="inOwnDblBack" placeholder="Enter y or n"></p>
+  <p> Can you verify when your partner's harness buckle is doubled back?
+  <input type="text" id="inPartnerDblBack" placeholder="Enter y or n"></p>
+  <p> Can you demonstrate how to tie a rewoven figure eight knot?
+  <input type="text" id="inOwnKnot" placeholder="Enter y or n"></p>
+  <p> Can you demonstrate how to properly load a belay device?
+  <input type="text" id="inOwnDevice" placeholder="Enter y or n"></p>
+  <p> Do you know how to confirm the carabiner on the device is locked?
+  <input type="text" id="inLockCarabiner" placeholder="Enter y or n"></p>
 </section>
 <br>
 
 <section class="comms_boxes">
   <h2> Verbal Communication Steps </h2>
-  <p> What two words should a climber say to verify his/her belayer is ready?</p>
-  <input type="text" id="inOnBelay">
-  <p> What two word reply from a belayer indicates he/she is ready?</p>
-  <input type="text" id="inBelayOn">
-  <p> What should a climber say to his/her belayer just before starting up a climb?</p>
-  <input type="text" id="inClimbing" >
-  <p> What two words should a belayer say to affirm a climber may begin?</p>
-  <input type="text" id="inClimbOn" >
+  <p> What two words should a climber say to verify his/her belayer is ready?
+  <input type="text" id="inOnBelay"></p>
+  <p> What two word reply from a belayer indicates he/she is ready?
+  <input type="text" id="inBelayOn"></p>
+  <p> What should a climber say to his/her belayer just before starting up a climb?
+  <input type="text" id="inClimbing"></p>
+  <p> What two words should a belayer say to affirm a climber may begin?
+  <input type="text" id="inClimbOn"></p>
+   <button class="submit" id="submit_btn">Submit</button>
 </section>
   <br>
-  <br>
-  <button id="submit_btn">Submit</button>
-
   <script src= "safetycheck.js"></script>
   </body>
 </html>
