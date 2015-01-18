@@ -1,5 +1,7 @@
-var submitClicked = document.getElementById('submit_btn');
-var currentClimber = getInfo();
+var submitClicked = document.getElementById("submit_btn");
+
+var currentClimber = [];
+
 
 function getInfo() {
 var name = document.getElementById('inName').value;
@@ -21,42 +23,44 @@ var climbCall = document.getElementById('inClimbing').value;
 var climbReply = document.getElementById('inClimbOn').value;
 
 var climber = new Climber (name, age, harness, rope, device, carabiner, harnessFit, partnerHarnessFit, dblBack, partnerDblBack, knotTied, deviceLoad, carabinerLock, belayCall, belayReply, climbCall, climbReply);
-console.log(belayCall);
 
-document.body.onload = addElement;
-return climber;
+currentClimber.push(climber);
 
+  for (i=0; i < currentClimber.length; i++){
+    if (currentClimber[i].isAdult() === false) {
+        referOther();
+    }
+    else if ((currentClimber[i].hasGear() === true) && (currentClimber[i].allInspect() === true) && (currentClimber[i].allComms() === true)){
+        welcome();
+    }
+    else {
+      takeClass();
+    }
+  }
 
-//elJoin.innerHTML = "<button class=\"submit\" id=\"join_btn\">Join</button>"
-  function addElement() {
-   var elFeedback = document.createElement("button");
-    var newContent = document.createTextNode("Feedback");
-    elFeedback.appendChild(newContent); //add the text node to the newly created div.
+  function referOther() {
+    var msg = document.getElementById('questionaire');
+    var itemContent = msg.innerHTML;
+    msg.innerHTML = '<p>The minimum age for our gym is 18. Please contact our local partner gym at this link to inquire about youth programs: </p>' + '<br>' + '<a href=\"http://www.verticalworld.com\">' + '</a>';
+  }
 
-    // add the newly created element and its content into the DOM
-    var currentBtn = document.getElementById("submit_btn");
-    document.body.insertBefore(elFeedback, currentBtn);
+  function welcome() {
+    var msg = document.getElementById('questionaire');
+    var itemContent = msg.innerHTML;
+    msg.innerHTML = '<p>Congratulations and Welcome!  Please proceed to our front desk and contact a staff member to complete your safety check in person and get your membership card.' +'</p>';
+  }
+
+  function takeClass() {
+    var msg = document.getElementById('questionaire');
+    var itemContent = msg.innerHTML;
+    msg.innerHTML = '<p>We encourage you to check out details for our Intro to Indoor Climbing course, available on our About Us page at the link above' +'</p>';
   }
 
 }
+
 submitClicked.addEventListener('click', getInfo, false);
 
-
-
-/*
-function evaluate(){
-  if (!currentClimber.isAdult ) {
-    console.log("referOther()");
-  }
-  else if ((currentClimber.hasGear == true) && (currentClimber.allInspect == true) && (currentClimber.allComms == true)){
-    console.log("welcome()");
-  }
-  else {
-    console.log("takeClass()");
-  }
- }
-*/
-//Each climber must be 18 or older and have all 4 pieces of equipment to proceed. Mechanisms for input will be text boxes. Eventually the 4 data from the 4 pieces of equipment will need to somehow be converted to boolean values to proceed.
+//Each climber must be 18 or older and have all 4 pieces of equipment to proceed.
 
 function Climber(name, age, harness, rope, device, carabiner, harnessFit, partnerHarnessFit, dblBack, partnerDblBack, knotTied, deviceLoad, carabinerLock, belayCall, belayReply, climbCall, climbReply) {
   this.name = name;
@@ -111,37 +115,4 @@ function Climber(name, age, harness, rope, device, carabiner, harnessFit, partne
 }
 
 
-
-
-/*Each climber must demonstrate 5 important steps of visual/physical inspection to proceed to final section. Five check boxes.
-
-
-function Inspection(harnessFit, harnessBuckle, knotTied, deviceLoad, carabinerLock) {
-  this.harnessFit = harnessFit;
-  this.harnessBuckle = harnessBuckle;
-  this.knotTied = knotTied;
-  this.deviceLoad = deviceLoad;
-  this.carabinerLock = carabiner;
-}
-
-
-//Each climber must know the correct call and response sequence for safe communications to complete the safety check. 4 text boxes.
-
-function Comms(belayCall, belayReply, climbCall, climbReply) {
-  this.belayCall = belayCall;
-  this.belayReply = belayReply;
-  this.climbCall = climbCall;
-  this.climbReply = climbReply;
-}
-
-
-var goodToGo = false;
-
-/*if (goodToGo){
-  proceed();
-else{
-  course101();
-}
-}
-*/
 
