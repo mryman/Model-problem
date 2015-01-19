@@ -16,7 +16,7 @@ Anyone wishing to participate at a climbing gym must demonstrate a baseline of k
 
 To model this with code, we will collect data from our user to test their knowledge of three main components of the safety check: Eligibility, Physical/Visual Inspection Sequence, Verbal Communications. Collecting all of their input into a data set and storing it via object constructor function then allows us to run the data through some logic and present the user with one of three applicable replies:
 
-1. To keep this model simple, we are requiring our users to be over the age of 18.  If they are not, our first logical comparison calls a function that will prompt them to contact a partner business that offers youth programs and suppies a link to the partner's website.
+1. To keep this model simple, we are requiring our users to be over the age of 18.  If they are not, our first logical comparison calls a function that will prompt them to contact a partner business that offers youth programs and supplies a link to the partner's website.
 
 2. If they are at least 18 years old, have the proper equipment, and are able to demonstrate that they possess the minimum required skills, they will be prompted to contact a staff member at the check in desk and proceed.
 
