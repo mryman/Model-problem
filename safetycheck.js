@@ -41,7 +41,7 @@ currentClimber.push(climber);
   function referOther() {
     var msg = document.getElementById('questionaire');
     var itemContent = msg.innerHTML;
-    msg.innerHTML = '<p>The minimum age for our gym is 18. Please contact our local partner gym at this link to inquire about youth programs: </p>' + '<br>' + '<a href=\"http://www.verticalworld.com\">' + '</a>';
+    msg.innerHTML = '<p class=>The minimum age for our gym is 18. Please contact our local partner gym at this link to inquire about youth programs: </p>' + '<br>' + '<a href=\"http://www.verticalworld.com\">Vertical World' +  '</a>';
   }
 
   function welcome() {

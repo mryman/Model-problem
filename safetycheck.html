@@ -23,99 +23,102 @@
     </ul>
   </div>
   </nav>
-  <body id="questionaire">
-  <h1>This is a climber safety check prep list</h1>
-  <p id="request-info">Please answer questions below. These steps are representative of what we expect to see when you complete a safety check in person with one of our staff members prior to being admitted to our facility</p>
-  <section class="eligibility_boxes">
-    <h2> Eligibility Section </h2>
-    <input type="text" id="inName" placeholder="Enter your name">
-    <input type="text" id="inAge" placeholder="Enter your age">
-    <p> Do you have a climbing harness?
-      <select id="inHarness">
-        <option value="n">n</option>
-        <option value="y">y</option>
-      </select>
-    </p>
-    <p> Do you have a climbing rope?
-      <select id="inRope">
-        <option value="n">n</option>
-        <option value="y">y</option>
-      </select>
-    </p>
-    <p> Do you have a belay device?
-      <select id="inDevice">
-        <option value="n">n</option>
-        <option value="y">y</option>
-      </select>
-    </p>
-    <p> Do you have a locking carabiner?
-      <select id="inCarabiner">
-        <option value="n">n</option>
-        <option value="y">y</option>
-      </select>
-    </p>
-  </section>
-  <br>
-<section class="inspection_boxes">
-  <h2> Physical / Visual Inspection Steps </h2>
-  <p> Do you know how to inspect your harness for correct sizing, fit, and orientation?
-    <select id="inOwnHarness">
-      <option value="n">n</option>
-      <option value="y">y</option>
-    </select>
-  </p>
-  <p> Do you know how to inspect your partner's harness for these factors as well?
-    <select id="inPartnerHarness">
-      <option value="n">n</option>
-      <option value="y">y</option>
-    </select>
-  </p>
-  <p> Can you verify when your harness buckle is doubled back?
-    <select id="inOwnDblBack">
-      <option value="n">n</option>
-      <option value="y">y</option>
-    </select>
-  </p>
-  <p> Can you verify when your partner's harness buckle is doubled back?
-    <select id="inPartnerDblBack">
-      <option value="n">n</option>
-      <option value="y">y</option>
-    </select>
-  </p>
-  <p> Can you demonstrate how to tie a rewoven figure eight knot?
-    <select id="inOwnKnot">
-      <option value="n">n</option>
-      <option value="y">y</option>
-    </select>
-  </p>
-  <p> Can you demonstrate how to properly load a belay device?
-    <select id="inOwnDevice">
-      <option value="n">n</option>
-      <option value="y">y</option>
-    </select>
-  </p>
-  <p> Do you know how to confirm the carabiner on the device is locked?
-    <select id="inLockCarabiner">
-      <option value="n">n</option>
-      <option value="y">y</option>
-    </select>
-  </p>
-</section>
-<br>
+  <body>
+    <article  id="questionaire">
+      <h1>This is a climber safety check prep list</h1>
+      <p id="request-info">Please answer questions below. These steps are representative of what we expect to see when you complete a safety check in person with one of our staff members prior to being admitted to our facility</p>
+      <section class="eligibility_boxes">
+        <h2> Eligibility Section </h2>
+        <input type="text" id="inName" placeholder="Enter your name">
+        <input type="text" id="inAge" placeholder="Enter your age">
+        <p> Do you have a climbing harness?
+          <select id="inHarness">
+            <option value="n">n</option>
+            <option value="y">y</option>
+          </select>
+        </p>
+        <p> Do you have a climbing rope?
+          <select id="inRope">
+            <option value="n">n</option>
+            <option value="y">y</option>
+          </select>
+        </p>
+        <p> Do you have a belay device?
+          <select id="inDevice">
+            <option value="n">n</option>
+            <option value="y">y</option>
+          </select>
+        </p>
+        <p> Do you have a locking carabiner?
+          <select id="inCarabiner">
+            <option value="n">n</option>
+            <option value="y">y</option>
+          </select>
+        </p>
+      </section>
+      <br>
+      <section class="inspection_boxes">
+        <h2> Physical / Visual Inspection Steps </h2>
+        <p> Do you know how to inspect your harness for correct sizing, fit, and orientation?
+          <select id="inOwnHarness">
+            <option value="n">n</option>
+            <option value="y">y</option>
+          </select>
+        </p>
+        <p> Do you know how to inspect your partner's harness for these factors as well?
+          <select id="inPartnerHarness">
+            <option value="n">n</option>
+            <option value="y">y</option>
+          </select>
+        </p>
+        <p> Can you verify when your harness buckle is doubled back?
+          <select id="inOwnDblBack">
+            <option value="n">n</option>
+            <option value="y">y</option>
+          </select>
+        </p>
+        <p> Can you verify when your partner's harness buckle is doubled back?
+          <select id="inPartnerDblBack">
+            <option value="n">n</option>
+            <option value="y">y</option>
+          </select>
+        </p>
+        <p> Can you demonstrate how to tie a rewoven figure eight knot?
+          <select id="inOwnKnot">
+            <option value="n">n</option>
+            <option value="y">y</option>
+          </select>
+        </p>
+        <p> Can you demonstrate how to properly load a belay device?
+          <select id="inOwnDevice">
+            <option value="n">n</option>
+            <option value="y">y</option>
+          </select>
+        </p>
+        <p> Do you know how to confirm the carabiner on the device is locked?
+          <select id="inLockCarabiner">
+            <option value="n">n</option>
+            <option value="y">y</option>
+          </select>
+        </p>
+      </section>
+      <br>
 
-<section class="comms_boxes">
-  <h2> Verbal Communication Steps </h2>
-  <p> What two words should a climber say to verify his/her belayer is ready?
-  <input type="text" id="inOnBelay"></p>
-  <p> What two word reply from a belayer indicates he/she is ready?
-  <input type="text" id="inBelayOn"></p>
-  <p> What should a climber say to his/her belayer just before starting up a climb?
-  <input type="text" id="inClimbing"></p>
-  <p> What two words should a belayer say to affirm a climber may begin?
-  <input type="text" id="inClimbOn"></p>
-   <button class="submit" id="submit_btn">Submit</button>
-</section>
-  <br>
+      <section class="comms_boxes">
+        <h2> Verbal Communication Steps </h2>
+        <p> What two words should a climber say to verify his/her belayer is ready?
+        <input type="text" id="inOnBelay"></p>
+        <p> What two word reply from a belayer indicates he/she is ready?
+        <input type="text" id="inBelayOn"></p>
+        <p> What should a climber say to his/her belayer just before starting up a climb?
+        <input type="text" id="inClimbing"></p>
+        <p> What two words should a belayer say to affirm a climber may begin?
+        <input type="text" id="inClimbOn"></p>
+         <button class="submit" id="submit_btn">Submit</button>
+      </section>
+    </article>
+      <br>
+
   <script src= "safetycheck.js"></script>
   </body>
 </html>
